@@ -1,0 +1,219 @@
+@charset "UTF-8";
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stalker_wrapp {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22842%22%20height%3D%22527.477%22%20viewBox%3D%220%200%20842%20527.477%22%3E%20%3Cpath%20id%3D%22field%22%20data-name%3D%22field%22%20d%3D%22M491.147%2C27.222c108.155%2C28.024%2C177.195%2C1.5%2C252.976%2C44.4C822.334%2C115.9%2C842%2C175.318%2C842%2C243.5%2C842%2C377.981%2C653.512%2C487%2C421%2C487c-51.166%2C0-115.418-.238-155.036-21.291-39.589-21.037-54.515-62.925-91.078-80.569C82.278%2C340.452%2C0%2C318.675%2C0%2C243.5%2C0%2C113.591%2C90.04-33.408%2C311.5-40.473c5.214-.166%2C42.918%2C5.206%2C93.731%2C25.161C431.086-5.16%2C454.483%2C17.722%2C491.147%2C27.222Z%22%20transform%3D%22translate(0%2040.477)%22%20fill%3D%22%23adffba%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 130% 130%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cloud_1 {
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22660.006%22%20height%3D%22401.093%22%20viewBox%3D%220%200%20660.006%20401.093%22%3E%20%3Cpath%20id%3D%22Icon_awesome-cloud%22%20data-name%3D%22Icon%20awesome-cloud%22%20d%3D%22M105.6%2C176.475A76.556%2C76.556%2C0%2C0%2C1%2C99%2C145.5c0-47.451%2C44.344-85.948%2C99-85.948a109.366%2C109.366%2C0%2C0%2C1%2C54.966%2C14.5C281.534%2C31.079%2C334.85%2C2.25%2C396%2C2.25c91.163%2C0%2C165%2C64.1%2C165%2C143.247%2C0%2C2.417-.1%2C4.835-.206%2C7.252%2C57.75%2C17.637%2C99.207%2C65.446%2C99.207%2C121.671%2C0%2C71.176-66.516%2C128.923-148.5%2C128.923H132c-72.91%2C0-132-51.3-132-114.6C0%2C233.326%2C45.375%2C187.039%2C105.6%2C176.475Z%22%20transform%3D%22translate(0%20-2.25)%22%20fill%3D%22%2338dcff%22%2F%3E%3C%2Fsvg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  z-index: -99;
+}
+
+.cloud_2 {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 400px;
+  height: 400px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22660.006%22%20height%3D%22401.093%22%20viewBox%3D%220%200%20660.006%20401.093%22%3E%20%3Cpath%20id%3D%22Icon_awesome-cloud%22%20data-name%3D%22Icon%20awesome-cloud%22%20d%3D%22M105.6%2C176.475A76.556%2C76.556%2C0%2C0%2C1%2C99%2C145.5c0-47.451%2C44.344-85.948%2C99-85.948a109.366%2C109.366%2C0%2C0%2C1%2C54.966%2C14.5C281.534%2C31.079%2C334.85%2C2.25%2C396%2C2.25c91.163%2C0%2C165%2C64.1%2C165%2C143.247%2C0%2C2.417-.1%2C4.835-.206%2C7.252%2C57.75%2C17.637%2C99.207%2C65.446%2C99.207%2C121.671%2C0%2C71.176-66.516%2C128.923-148.5%2C128.923H132c-72.91%2C0-132-51.3-132-114.6C0%2C233.326%2C45.375%2C187.039%2C105.6%2C176.475Z%22%20transform%3D%22translate(0%20-2.25)%22%20fill%3D%22%2338dcff%22%2F%3E%3C%2Fsvg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20% 0;
+  z-index: -99;
+}
+
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.6s;
+  transition-timing-function: ease-out;
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/cutedog.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.pc-nav {
+  display: none;
+}
+
+.sp-nav {
+  display: block;
+}
+
+.sp {
+  display: block;
+}
+
+header .logo {
+  width: 50px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+header .logo a {
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+hamburger(ハンバーガーアイコン)
+=================================== */
+.hamburger {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.hamburger__line {
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  right: 0;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.hamburger__line--1 {
+  top: 1px;
+}
+
+.hamburger__line--2 {
+  top: 12px;
+}
+
+.hamburger__line--3 {
+  top: 24px;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+  transform: rotate(-45deg);
+  top: 11px;
+  border: solid #ec6d7300 1px;
+  background-color: #000000;
+}
+
+.open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.open .hamburger__line--3 {
+  transform: rotate(45deg);
+  top: 11px;
+  border: solid #ec6d7300 1px;
+  background-color: #000000;
+}
+
+/* 
+sp-nav(ナビ)
+=================================== */
+.sp-nav {
+  position: fixed;
+  right: -100%;
+  /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+  top: 0;
+  width: 75%;
+  /* 出てくるスライドメニューの幅 */
+  height: 100vh;
+  background-color: #fff;
+  transition: all 0.5s;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+/*ハンバーガーがクリックされたら右からスライド*/
+.open .sp-nav {
+  right: 0;
+}
+
+/* 
+black-bg(ハンバーガーメニュー解除用bg)
+=================================== */
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+@media screen and (min-width: 560px) {
+  .stalker_wrapp {
+    background-size: 90% 90%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .pc-nav {
+    display: block;
+  }
+  .sp-nav {
+    display: none;
+  }
+  .sp {
+    display: none;
+  }
+  .stalker_wrapp {
+    background-size: 70% 70%;
+  }
+  header nav {
+    z-index: 999;
+  }
+  header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul :first-of-type {
+    margin-right: auto;
+  }
+  header nav ul li {
+    margin: 0 40px;
+  }
+}
+/*# sourceMappingURL=dogCursor.css.map */
