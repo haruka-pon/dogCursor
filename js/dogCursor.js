@@ -1,32 +1,40 @@
 //マウスストーカー用のdivを取得
 const stalker = document.getElementById('stalker');
 
+const stalkerJust = document.getElementById('stalker_just_wrapp');
+
 //上記のdivタグをマウスに追従させる処理
 document.addEventListener('mousemove', function (e) {
     stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
 });
 
+document.addEventListener('mousemove', function (f) {
+    stalkerJust.style.transform = 'translate(' + f.clientX + 'px, ' + f.clientY + 'px)';
+});
 
-// // JSレスポンシブ
-// $windowWidth = window.innerWidth;
 
-// $breakPointA = 560;
-// $breakPointB = 960;
 
-// isMobileSize = ($windowWidth < $breakPointA);
-// isTabletSize = ($windowWidth <= $breakPointB) && ($windowWidth > $breakPointA);
-// isPcSize = ($windowWidth > $breakPointB);
 
-// if (isMobileSize) {
-//     //横幅560px以下（スマホ）
+// パララックスのターゲット取得
+const target = document.getElementsByClassName('js-parallax');
 
-// }
+// パララックスを行うエリア
+const activeArea = document.getElementById('js-parallaxArea');
 
-// if (isTabletSize) {
-//     //横幅560px以上、960px以下（タブレット）
-// }
+// ウィンドウの中心の取得
+const xCenter = window.innerWidth / 2;
+const yCenter = window.innerHeight / 2;
 
-// if (isPcSize) {
-//     //横幅960px以上（PC）
+// パララックスで移動させる距離
+const parallaxVal = 10; //中心からマウスの距離の10分１移動
 
-// }
+// マウスがパララックスエリアに入った時のイベント
+activeArea.addEventListener('mousemove', (e) => {
+    // マウスの座標を取得して 中心からの距離取得、 そこからpararaxValで距離を調整
+    const x = (xCenter - e.pageX) / parallaxVal;
+    const y = (yCenter - e.pageY) / parallaxVal;
+    // パララックスさせる要素にstyleの指定
+    for (var i = 0; i < target.length; i++) {
+        target[i].style.transform = `translate(${-x}px, ${-y}px)`;
+    }
+});

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
   font-family: 'Montserrat', sans-serif;
+  cursor: none;
 }
 
 .stalker_wrapp {
@@ -54,6 +55,25 @@ html {
   width: 100px;
   height: 100px;
   background-image: url(../images/cutedog.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+#stalker_just_wrapp {
+  pointer-events: none;
+  position: fixed;
+  top: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transform: translate(0, 0);
+  z-index: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/tenisBall.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -215,5 +235,53 @@ black-bg(ハンバーガーメニュー解除用bg)
   header nav ul li {
     margin: 0 40px;
   }
+}
+
+.pararaxArea {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pararaxArea .pararaxItem {
+  position: absolute;
+}
+
+.pararaxArea .pararaxItem:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(100, 101, 101, 0.85);
+  transition: transform .6s linear .008s;
+  border-radius: 500px;
+}
+
+.pararaxArea .pararaxItem:nth-child(2) {
+  width: 270px;
+  height: 270px;
+  background-color: rgba(255, 255, 255, 0.71);
+  transition: transform .5s linear .004s;
+  border-radius: 500px;
+}
+
+.pararaxArea .pararaxItem:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(6, 6, 6, 0.68);
+  transition: transform .3s linear 0s;
+  border-radius: 500px;
+}
+
+.pararaxArea .centerObj {
+  position: absolute;
+  z-index: 100;
+  width: 80px;
+  height: 80px;
+}
+
+.pararaxArea .centerObj img {
+  width: 100%;
 }
 /*# sourceMappingURL=dogCursor.css.map */
